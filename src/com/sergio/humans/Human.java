@@ -71,9 +71,12 @@ public class Human {
 	public void attack(Human human) {
 		
 		System.out.println("Attacking...!!!");
-		int loss=getStrength();
-		setHealth(getHealth()-loss);
-		System.out.println("Health: "+getHealth());
+		System.out.println("Health Human 1 before attack: "+this.getHealth());
+		System.out.println("Health Human 2 before receive attack: "+human.getHealth());
+		int loss=this.getStrength();
+		human.setHealth(human.getHealth()-loss);
+		System.out.println("Health Human 1 after attack: "+this.getHealth());
+		System.out.println("Health Human 2 after receive attack: "+ human.getHealth());
 	}
 
 }
